@@ -13,7 +13,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author victor
+ * 
  */
 public class Notepad extends javax.swing.JFrame {
 
@@ -54,15 +54,16 @@ public class Notepad extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        bLoad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/ieselcaminas/notepad/document24.png"))); // NOI18N
-        bLoad.setText("Load");
+        bLoad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/document24.png"))); // NOI18N
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("properties/Bundle_es_ES"); // NOI18N
+        bLoad.setText(bundle.getString("Notepad.bLoad.text")); // NOI18N
         bLoad.setFocusable(false);
         bLoad.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bLoad.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(bLoad);
 
-        bSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/org/ieselcaminas/notepad/diskette24.png"))); // NOI18N
-        bSave.setText("Save");
+        bSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/diskette24.png"))); // NOI18N
+        bSave.setText(bundle.getString("Notepad.bSave.text")); // NOI18N
         bSave.setFocusable(false);
         bSave.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         bSave.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -76,12 +77,12 @@ public class Notepad extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        jMenu1.setText("File");
+        jMenu1.setText(bundle.getString("Notepad.jMenu1.text")); // NOI18N
 
-        miNew.setText("New");
+        miNew.setText(bundle.getString("Notepad.miNew.text")); // NOI18N
         jMenu1.add(miNew);
 
-        miOpen.setText("Open file");
+        miOpen.setText(bundle.getString("Notepad.miOpen.text")); // NOI18N
         miOpen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 miOpenActionPerformed(evt);
@@ -90,18 +91,18 @@ public class Notepad extends javax.swing.JFrame {
         jMenu1.add(miOpen);
 
         miSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        miSave.setText("Save file");
+        miSave.setText(bundle.getString("Notepad.miSave.text")); // NOI18N
         jMenu1.add(miSave);
         jMenu1.add(jSeparator1);
 
-        miExit.setText("Exit");
+        miExit.setText(bundle.getString("Notepad.miExit.text")); // NOI18N
         jMenu1.add(miExit);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText(bundle.getString("Notepad.jMenu2.text")); // NOI18N
 
-        jMenuItem1.setText("Undo");
+        jMenuItem1.setText(bundle.getString("Notepad.jMenuItem1.text")); // NOI18N
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -109,17 +110,17 @@ public class Notepad extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem1);
 
-        jMenuItem2.setText("Redo");
+        jMenuItem2.setText(bundle.getString("Notepad.jMenuItem2.text")); // NOI18N
         jMenu2.add(jMenuItem2);
 
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Help");
+        jMenu3.setText(bundle.getString("Notepad.jMenu3.text")); // NOI18N
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
-        setBounds(0, 0, 517, 357);
+        setBounds(0, 0, 311, 357);
     }// </editor-fold>//GEN-END:initComponents
 
     private void miOpenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miOpenActionPerformed
@@ -186,6 +187,7 @@ public class Notepad extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Notepad.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
